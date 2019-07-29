@@ -21,4 +21,17 @@ public class OptionalUtility {
             return Optional.empty();
         }
     }
+
+    /**
+     *
+     * @param s input string
+     * @return Optional<Double>
+     */
+    public static Optional<Double> stringToDouble(String s) {
+        try {
+            return Optional.ofNullable(Double.parseDouble(s));
+        } catch (NumberFormatException e) {
+            return Optional.empty();
+        }
+    }
 }
